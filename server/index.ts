@@ -3,12 +3,20 @@ import {} from 'morgan';
 import {} from 'passport';
 import {} from 'jsonwebtoken';
 import { Application } from 'express';
+import { config } from 'dotenv';
 
 import express = require('express');
 import morgan = require('morgan');
+import dotenv = require('dotenv');
 
 let app: Application = express();
 
+const results = config();
+
+if(results.error) {
+    throw results.error;
+}
+console.log(results.parsed);
 app.use(urlencoded({
     extended: false
 }))
