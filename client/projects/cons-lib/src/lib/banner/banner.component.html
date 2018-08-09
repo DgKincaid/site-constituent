@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="container">
+      <button mat-icon-button (click)="onMenuClick()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div class="banner-title">
+        <ng-content select=".banner-title"></ng-content>
+    </div>
+
+    <span class="banner-spacer"></span>
+    <div class="banner-right">
+      <ng-content select=".banner-right"></ng-content>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
