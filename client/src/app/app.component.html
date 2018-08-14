@@ -1,9 +1,17 @@
 <lib-banner>
   <ng-container class="banner-title">Constent</ng-container>
   <ng-container class="banner-right">
-    <button mat-icon-button routerLink="/login">
-        <mat-icon>account_circle</mat-icon>
+    <!-- <button mat-icon-button routerLink="/login">
+      <mat-icon>account_circle</mat-icon>
+    </button> -->
+    <button *ngIf="!authService.isLoggedIn(); else loggedIn" mat-raised-button routerLink="/login">
+      Sign In
     </button>
+    <ng-template #loggedIn>
+      <button mat-icon-button routerLink="/account">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </ng-template>
   </ng-container>
 </lib-banner>
 <router-outlet></router-outlet>

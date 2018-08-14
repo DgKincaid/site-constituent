@@ -24,6 +24,8 @@
     "@angular/router": "^6.0.3",
     "cons-lib": "file:dist/cons-lib",
     "core-js": "^2.5.4",
+    "moment": "^2.22.2",
+    "momentjs": "^2.0.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
